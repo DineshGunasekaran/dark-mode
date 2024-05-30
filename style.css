@@ -3,10 +3,20 @@
   padding: 0;
 }
 
+:root {
+  --primary-color: #edf2fc;
+  --secondary-color: #212121;
+}
+
+.dark-mode {
+  --primary-color: #000106;
+  --secondary-color: #fff;
+}
+
 .hero {
   height: 100vh;
   width: 100%;
-  background: #edf2fc;
+  background: var(--primary-color);
   position: relative;
 }
 
@@ -17,6 +27,8 @@ nav {
   justify-content: space-between;
   padding: 20px;
   margin: auto;
+  flex: 1;
+  text-align: right;
 }
 
 .logo {
@@ -24,15 +36,22 @@ nav {
   cursor: pointer;
 }
 
+nav ul {
+  flex: 1;
+  text-align: right;
+
+}
+
 nav ul li {
   display: inline-block;
   padding: 10px 20px;
   list-style: none;
+  text-align: right;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #606163;
+  color: var(--secondary-color);
 }
 
 nav ul li a:hover {
@@ -46,7 +65,7 @@ nav ul li a:hover {
 
 .info h1 {
   font-size: 70px;
-  color: #212121;
+  color: var(--secondary-color);
   margin-bottom: 20px;
 }
 
@@ -55,16 +74,16 @@ nav ul li a:hover {
 }
 
 .info p {
-  color: #606163;
+  color: var(--secondary-color);
   line-height: 22px;
 }
 
 .info a {
-  background: #212121;
+  background: var(--secondary-color);
   margin: 30px 0;
   padding: 10px 18px;
   text-decoration: none;
-  color: #fff;
+  color:var(--primary-color);
   display: inline-block;
   border-radius: 5px;
 }
@@ -102,10 +121,15 @@ nav ul li a:hover {
 
 .social-links a {
   font-size: 30px;
-  color: #606163;
+  color: var(--secondary-color);
   margin-right: 20px;
 }
 
 .social-links a:hover {
   color: #ff4321;
 } 
+
+#icon {
+  width: 30px;
+  cursor: pointer;
+}
